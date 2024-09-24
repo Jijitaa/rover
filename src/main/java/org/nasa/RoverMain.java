@@ -1,6 +1,5 @@
 package org.nasa;
 
-import lombok.RequiredArgsConstructor;
 import org.nasa.service.*;
 
 import java.io.IOException;
@@ -8,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 
-@RequiredArgsConstructor
 public class RoverMain {
 
     private static final RoverService roverService = new RoverService();
