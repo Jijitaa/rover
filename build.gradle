@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.nasa'
+archivesBaseName = 'rover'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly         group: 'org.projectlombok', name: 'lombok',       version: '1.18.34'
+    annotationProcessor group: 'org.projectlombok', name:'lombok',        version: '1.18.34'
+
+    testImplementation  group: 'org.mockito',       name: 'mockito-core', version: '5.13.0'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.nasa.Main'
+    }
+    destinationDirectory.set(file("$rootDir"))
+}
