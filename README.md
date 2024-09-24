@@ -20,4 +20,4 @@ The output for each rover is its final co-ordinates and heading.
 # Run
 You can run the project using the command line:
 
-java -jar rover.jar <input-file>
+java -jar rover.jar input.txt
