@@ -24,7 +24,7 @@ test {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'org.nasa.Main'
+        attributes 'Main-Class': 'org.nasa.RoverMain'
     }
     destinationDirectory.set(file("$rootDir"))
 }

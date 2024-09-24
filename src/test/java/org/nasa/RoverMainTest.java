@@ -1,5 +1,6 @@
+package org.nasa;
+
 import org.junit.jupiter.api.Test;
-import org.nasa.RoverMain;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -12,15 +13,15 @@ public class RoverMainTest {
     @Test
     public void should_display_rovers_final_positions() {
         // Given
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        PrintStream out = new PrintStream(byteArrayOutputStream);
+        var byteArrayOutputStream = new ByteArrayOutputStream();
+        var out = new PrintStream(byteArrayOutputStream);
         System.setOut(out);
 
         // When
         RoverMain.main(new String[] { "src/test/resources/input.txt" });
 
         // Then
-        String consoleOutput = byteArrayOutputStream.toString(Charset.defaultCharset());
+        var consoleOutput = byteArrayOutputStream.toString(Charset.defaultCharset());
         assertEquals("1 3 N\n5 1 E\n", consoleOutput);
         out.close();
     }

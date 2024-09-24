@@ -1,12 +1,10 @@
-package service;
+package org.nasa.service;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.nasa.entity.Rover;
 import org.nasa.enumerator.DirectionEnum;
-import org.nasa.service.MovementStrategy;
-import org.nasa.service.TurnLeftStrategy;
 
 import java.util.stream.Stream;
 
@@ -17,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class TurnLeftStrategyTest {
 
-    private static final MovementStrategy turnLeftStrategy = new TurnLeftStrategy();
+    private final MovementStrategy turnLeftStrategy = new TurnLeftStrategy();
 
     @ParameterizedTest
     @MethodSource("getRovers")
